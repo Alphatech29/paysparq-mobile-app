@@ -35,7 +35,7 @@ const Index = () => {
             />
             <CustomButton 
               title="Log In"
-              handlePress={() => router.push('/login')}
+              handlePress={() => router.push('/dashboard')}
               containerStyles="w-[50%] ml-2 bg-text border border-primary"
               textStyles="text-primary"
             />
