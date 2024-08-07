@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Paysparq",
+    "slug": "paysparq",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "scheme": "paysparq",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/footer-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F66B04"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "package": "com.jsm.paysparq"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#F66B04"
+      },
+      "package": "com.jsm.paysparq"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
