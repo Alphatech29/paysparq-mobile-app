@@ -9,6 +9,7 @@ module.exports = {
         secondary: '#451805',
         paysparq: '#FCEDD4',
         text: '#ffffff',
+        dash: '#FFF9EC'
       },
       fontFamily: {
         inter: ['Inter-Regular', 'sans-serif'],

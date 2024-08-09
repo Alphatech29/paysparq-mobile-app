@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const welcome = () => {
+const Addfund = () => {
   return (
     <View>
-      <Text>welcome</Text>
+      <Text>Addfund</Text>
     </View>
   )
 }
 
-export default welcome
+export default Addfund
