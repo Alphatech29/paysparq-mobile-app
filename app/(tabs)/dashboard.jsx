@@ -1,10 +1,10 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Header from '../../components/Dashboard/Header';
-import AccounCard from '../../components/Dashboard/AccounCard';
-import DashNavBar from '../../components/Dashboard/DashNavBar';
-import DashCard from '../../components/Dashboard/DashCard';
+import Header from '../../components/DashboardComponents/Header';
+import AccounCard from '../../components/DashboardComponents/AccounCard';
+import DashNavBar from '../../components/DashboardComponents/DashNavBar';
+import DashCard from '../../components/DashboardComponents/DashCard';
 
 
 

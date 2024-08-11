@@ -1,7 +1,7 @@
 import { View, Text , TouchableOpacity } from "react-native";
 import React from "react";
 import { useRouter } from "expo-router";
-import Send from "../../assets/Svg/send";
+import Send from '../../assets/Svg/Send'
 import Addfund from "../../assets/Svg/Addfund";
 import Paybills from "../../assets/Svg/Paybills";
 import Convert from "../../assets/Svg/Convert";
@@ -30,7 +30,7 @@ const DashNavBar = () => {
           <TouchableOpacity 
           className="bg-primary p-[10px] rounded-[10px]" 
           style={{backgroundColor: 'rgba(246, 107, 4, 0.20)', shadowColor:"0px 1.2px 2px 0px rgba(0, 0, 0, 0.20)" , shadowOpacity: 0.2, shadowRadius: 2, elevation: 2,}}
-          onPress={() => router.push('/send')}
+          onPress={() => router.push('/transfer')}
           >
           <Send/>
           </TouchableOpacity>
