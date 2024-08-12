@@ -1,7 +1,7 @@
 import { View, Text, TextInput } from "react-native";
 import React from "react";
 
-const Form = ({placeholder, value, handleChangeText, placeholderColor, otherStyles, ...props
+const Form = ({placeholder, value, handleChangeText, placeholderColor, style, otherStyles, ...props
 }) => {
   return (
     <View
@@ -18,6 +18,7 @@ const Form = ({placeholder, value, handleChangeText, placeholderColor, otherStyl
        placeholder={placeholder}
        placeholderTextColor={placeholderColor}
        onChange={handleChangeText}
+       style={style}
       >
       </TextInput>
     </View>

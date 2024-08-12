@@ -1,23 +1,19 @@
-import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../../components/header";
 import { useRouter } from "expo-router";
 import Form from "../../components/Transfer/form";
 import CustomButton from "../../components/CustomButton";
+import Dropdown from "../../components/Dropdown";
 
-const Banktransfer = () => {
+const BankTransfer = () => {
   const router = useRouter();
 
-  const [activeIndex, setActiveIndex] = useState(0);
   const [form, setForm] = useState({
-    accountNumber: "",
-    bankName: "",
+    amount: "",
+    exchangeAmount: "",
   });
-
-  const handlePress = (index) => {
-    setActiveIndex(index);
-  };
 
   const handleChangeText = (text, field) => {
     setForm({ ...form, [field]: text });
@@ -32,7 +28,7 @@ const Banktransfer = () => {
       <ScrollView>
         <View className="pt-5">
           <Text className="font-interM text-center text-secondary">
-          Easily convert your money from one currency to another securely.
+            Easily convert your money from one currency to another securely.
           </Text>
           <View
             className="p-3 items-center justify-between mt-4 h-[70vh] w-full"
@@ -44,39 +40,61 @@ const Banktransfer = () => {
               borderStyle: "dashed",
             }}
           >
-          
-           <View className="w-full items-center">
-           <Form
-              placeholder="Enter 10 digits Account Number"
-              placeholderColor="#5A1E0450"
-              value={form.accountNumber}
-              handleChangeText={(text) => handleChangeText(text, 'accountNumber')}
-              otherStyles="mt-3 py-4"
-            />
-           <View className="rounded-[7px] bg-primary mt-3"> 
-            <Text className=" text-text p-[3px] font-interSB text-[13px]">1USD=1550 NGN</Text></View>
-            <Form
-              placeholder="Select Beneficiaries Bank"
-              placeholderColor="#5A1E0450"
-              value={form.bankName}
-              handleChangeText={(text) => handleChangeText(text, 'bankName')}
-              otherStyles="mt-3 py-4"
-            />
-           </View>
-
+            <View className="w-full items-center">
+              <View
+                className="flex-row mt-3 w-full justify-between"
+                style={{
+                  backgroundColor: "rgba(252, 237, 212, 0.20)",
+                  borderColor: "rgba(159, 62, 13, 0.12)",
+                  borderWidth: 1.2,
+                  borderRadius: 10,
+                }}
+              >
+                <Dropdown />
+                <Form
+                  placeholder="Amount"
+                  placeholderColor="#5A1E0450"
+                  value={form.amount}
+                  handleChangeText={(text) => handleChangeText(text, "amount")}
+                  otherStyles=" py-4 w-[250px] border-0"
+                  style={{ textAlign: 'right' }}
+                />
+              </View>
+              <View className="rounded-[7px] bg-primary mt-3">
+                <Text className="text-text p-[3px] font-interSB text-[13px]">
+                  1USD=1550 NGN
+                </Text>
+              </View>
+              <View
+                className="flex-row mt-3 w-full justify-between"
+                style={{
+                  backgroundColor: "rgba(252, 237, 212, 0.20)",
+                  borderColor: "rgba(159, 62, 13, 0.12)",
+                  borderWidth: 1.2,
+                  borderRadius: 10,
+                }}
+              >
+                <Dropdown />
+                <Form
+                  placeholder="Exchange Amount"
+                  placeholderColor="#5A1E0450"
+                  value={form.exchangeAmount}
+                  handleChangeText={(text) => handleChangeText(text, "exchangeAmount")}
+                  otherStyles=" py-4 w-[250px] border-0"
+                  style={{ textAlign: 'right' }}
+                />
+              </View>
+            </View>
             <CustomButton
               title={"Continue"}
-              handlePress={() => {
-                // Add functionality here
-              }}
+              handlePress={() => router.push('/review')}
               containerStyles="w-full min-h-[40px] mt-8"
             />
           </View>
         </View>
-
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default Banktransfer;
+export default BankTransfer;

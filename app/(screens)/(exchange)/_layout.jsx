@@ -6,7 +6,7 @@ const ConvertLayout = () => {
   return (
     <>
       <Stack>
-      <Stack.Screen name="exchange" options={{ headerShown: false }} />
+      <Stack.Screen name="review" options={{ headerShown: false }} />
       </Stack>
       <StatusBar 
       className="bg-secondary"
