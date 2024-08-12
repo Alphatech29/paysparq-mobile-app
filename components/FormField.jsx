@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
 
-const FormField = ({ title , placeholder , value , handleChangeText , placeholderColor , otherStyles , ...props}) => {
+const FormField = ({ title , placeholder , value , handleChangeText , Style, placeholderColor , otherStyles , ...props}) => {
     const [showPassword, setshowPassword] = useState(false)
 
   return (
@@ -13,9 +13,11 @@ const FormField = ({ title , placeholder , value , handleChangeText , placeholde
       className="text-sm font-interSB text-secondary">
       {title}
     </Text>
-    <View className="w-full h-[47px] focus:border-green-500 text-secondarys items-center px-2 flex-row"  style={{backgroundColor: 'rgba(246, 107, 4, 0.07)', borderColor: 'rgba(159, 62, 13, 0.30)', borderWidth: 1.2, borderRadius: 10,}}>
+    <View 
+    className="w-full h-[47px] focus:border-green-500 text-secondarys items-center px-2 flex-row"
+    style={{backgroundColor: 'rgba(246, 107, 4, 0.07)', borderColor: 'rgba(159, 62, 13, 0.30)', borderWidth: 1.2, borderRadius: 10}}>
         <TextInput 
-        className="flex-1 text-secondary font-interSB text-base"
+        className="flex-1 text-secondary font-interSB text-base justify-center pb-[5px]"
         value={value}
         placeholder={placeholder}
         placeholderTextColor={placeholderColor}

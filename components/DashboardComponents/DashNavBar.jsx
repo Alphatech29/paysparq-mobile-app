@@ -52,7 +52,7 @@ const DashNavBar = () => {
           <TouchableOpacity 
           className="bg-primary p-[10px] rounded-[10px]" 
           style={{backgroundColor: 'rgba(246, 107, 4, 0.20)', shadowColor:"0px 1.2px 2px 0px rgba(0, 0, 0, 0.20)" , shadowOpacity: 0.2, shadowRadius: 2, elevation: 2,}}
-          onPress={() => router.push('/convert')}
+          onPress={() => router.push('/exchange')}
           >
           <Convert/>
           </TouchableOpacity>

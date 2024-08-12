@@ -70,7 +70,6 @@ const AddFundScreen = () => {
           title={'Share Details'}
           handlePress={() => handleShare(accountDetails)}
           containerStyles="w-[]  min-h-[40px] w-[160px]"
-          
           />
          </View>
          </View>

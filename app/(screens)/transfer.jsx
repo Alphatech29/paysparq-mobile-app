@@ -35,7 +35,7 @@ const TransferScreen = () => {
             <View className="pt-6 w-full justify-center items-center flex-col space-y-2">
               <TouchableOpacity
                 activeOpacity={1}
-                onPress={() => {}}
+                onPress={() => router.push('/paysparq')}
                 className="flex-row justify-start items-center gap-2 w-full pb-1"
                 style={{
                   backgroundColor: " rgba(246, 107, 4, 0.10)",
@@ -59,7 +59,7 @@ const TransferScreen = () => {
 
               <TouchableOpacity
                 activeOpacity={1}
-                onPress={() => {}}
+                onPress={() => router.push('/banktransfer')}
                 className="flex-row justify-start items-center gap-2 w-full pb-1"
                 style={{
                   backgroundColor: " rgba(246, 107, 4, 0.10)",
