@@ -21,7 +21,9 @@ const DashNavBar = () => {
           style={{backgroundColor: 'rgba(246, 107, 4, 0.20)', shadowColor:"0px 1.2px 2px 0px rgba(0, 0, 0, 0.20)" , shadowOpacity: 0.2, shadowRadius: 2, elevation: 2,}}
           onPress={() => router.push('/addfund')}
           >
-          <Addfund/>
+          <Addfund
+          color="#F66B04"
+          />
           </TouchableOpacity>
           <Text className="text-[12px] font-interSB text-primary opacity-70">Add Fund</Text>
         </View>
@@ -32,7 +34,9 @@ const DashNavBar = () => {
           style={{backgroundColor: 'rgba(246, 107, 4, 0.20)', shadowColor:"0px 1.2px 2px 0px rgba(0, 0, 0, 0.20)" , shadowOpacity: 0.2, shadowRadius: 2, elevation: 2,}}
           onPress={() => router.push('/transfer')}
           >
-          <Send/>
+          <Send
+          color="#F66B04"
+          />
           </TouchableOpacity>
           <Text className="text-[12px] font-interSB text-primary opacity-70">Send</Text>
         </View>
@@ -43,7 +47,9 @@ const DashNavBar = () => {
           style={{backgroundColor: 'rgba(246, 107, 4, 0.20)', shadowColor:"0px 1.2px 2px 0px rgba(0, 0, 0, 0.20)" , shadowOpacity: 0.2, shadowRadius: 2, elevation: 2,}}
           onPress={() => router.push('/paybills')}
           >
-          <Paybills/>
+          <Paybills
+          color="#F66B04"
+          />
           </TouchableOpacity>
           <Text className="text-[12px] font-interSB text-primary opacity-70">Pay Bills</Text>
         </View>
